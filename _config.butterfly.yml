@@ -27,6 +27,7 @@ menu:
     音乐: /music/ || fas fa-music
     照片: /Gallery/ || fas fa-images
     电影: /movies/ || fas fa-video
+  留言板: /comments/ || fas fa-comments
   友链: /link/ || fas fa-link
   关于: /about/ || fas fa-heart
   
@@ -419,13 +420,13 @@ addtoany:
 comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
-  use: # Valine,Disqus
+  use: Twikoo # Valine,Disqus
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
-  lazyload: false
-  count: false # Display comment count in post's top_img
-  card_post_count: false # Display comment count in Home Page
+  lazyload: true
+  count: true # Display comment count in post's top_img
+  card_post_count: true # Display comment count in Home Page
 
 # disqus
 # https://disqus.com/
@@ -497,9 +498,9 @@ facebook_comments:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId:
-  region:
-  visitor: false
+  envId: https://my-twikoo-orpin.vercel.app/
+  region: ap-hangzhou
+  visitor: true
   option:
 
 # Giscus
@@ -934,8 +935,30 @@ css_prefix: true
 inject:
   head:
     - <link rel="stylesheet" href="/css/center-atom.css">
+    - <link rel="stylesheet" href="/css/custom.css">
   bottom:
-    # - <script src="xxxx"></script>
+    - <script defer src="/live2d-widget/autoload.js"></script>
+
+# 信封留言板
+# see https://akilar.top/posts/e2d3c450/
+envelope_comment:
+  enable: true #控制开关
+  custom_pic:      
+    cover: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/violet.jpg #信笺头部图片
+    line: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/line.png #信笺底部图片
+    beforeimg: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/before.png # 信封前半部分
+    afterimg: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/after.png # 信封后半部分
+  message: #信笺正文，多行文本，写法如下
+    - 有什么想问的？
+    - 有什么想说的？
+    - 有什么想吐槽的？
+    - 哪怕是有什么想吃的，都可以告诉我哦~
+  bottom: 自动书记人偶竭诚为您服务！ #仅支持单行文本
+  height: #1050px，信封划出的高度
+  path: #【可选】comments 的路径名称。默认为 comments，生成的页面为 comments/index.html
+  front_matter: #【可选】comments页面的 front_matter 配置
+    title: 留言板
+    comments: true
 
 # CDN
 # Don't modify the following settings unless you know how they work
