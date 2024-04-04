@@ -2,7 +2,7 @@
 title: MySQL的数据目录
 date: 2024-04-01 16:37:48
 tags: MySQL
-cover: /img/cover_05.png
+cover: https://blog-photos-lxy.oss-cn-hangzhou.aliyuncs.com/images/2023/7/202404041655917.png
 top_img: https://bu.dusays.com/2021/03/06/31162e0f3b406.jpg
 ---
 
