@@ -103,6 +103,22 @@ search:
   field: post
   content: true
 
+algolia:
+  appId: "00PKU8B7R6"
+  apiKey: "058cbcb1db57036717778c874da0ef87"
+  adminApiKey: "73347392cfcc93c354870808e79f9653"
+  chunkSize: 5000
+  indexName: "blog-leo"
+  fields:
+    - content:strip:truncate,0,500
+    - excerpt:strip
+    - gallery
+    - permalink
+    - photos
+    - slug
+    - tags
+    - title
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
