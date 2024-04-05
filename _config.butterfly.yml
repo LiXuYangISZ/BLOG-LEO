@@ -7,7 +7,7 @@ nav:
   display_title: true
   fixed: false # fixed navigation bar
 
-# Menu 目錄
+# Menu 目录
 # menu:
   # Home: / || fas fa-home
   # Archives: /archives/ || fas fa-archive
@@ -23,7 +23,7 @@ menu:
   时间轴: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
-  清单||fa fa-heartbeat:
+  清单||fa fa-heartbeat || hide:
     音乐: /music/ || fas fa-music
     照片: /Gallery/ || fas fa-images
     电影: /movies/ || fas fa-video
@@ -46,10 +46,15 @@ code_word_wrap: false
 #   icon: link || the description || color
 social:
   fab fa-github: https://github.com/LiXuYangISZ || Github || '#24292e'
-  微信: /img/WeChatQRCode.jpg || icon-weixin || faa-tada
-  QQ: https://res.abeim.cn/api/qq/?qq=2422737092 || icon-QQ || faa-tada
-  B站: https://space.bilibili.com/434261812 || icon-bilibili || faa-tada
-  QQ邮箱: mailto:2422737092@qq.com || icon-youxiang || faa-tada
+  fas fa-envelope: mailto:2422737092@qq.com || Email
+  fas fa-weixin: /img/WeChatQR.jpg || WeChat
+  fas fa-qq: https://res.abeim.cn/api/qq/?qq=2422737092 || QQ || '#3a9ced'
+  fas fa-bilibili: https://space.bilibili.com/434261812 || BiliBili || '#20b0e3'
+  # 微信: https://blog-photos-lxy.oss-cn-hangzhou.aliyuncs.com/images/2023/7/202404041655138.jpg || icon-weixin || faa-tada
+  # QQ: https://res.abeim.cn/api/qq/?qq=2422737092 || icon-QQ || faa-tada
+  # B站: https://space.bilibili.com/434261812 || icon-bilibili || faa-tada
+  # Email: mailto:2422737092@qq.com || icon-email || faa-tada
+  # Github: https://github.com/LiXuYangISZ || icon-Github || faa-tada
 
 # Image (圖片設置)
 # --------------------------------------
@@ -165,7 +170,7 @@ copy:
 toc:
   post: true
   page: true
-  number: true
+  number: false # 是否显示章节数[一般都自定义了，手动显示]
   expand: false
   style_simple: false # for post
   scroll_percent: true
@@ -936,11 +941,14 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
+    - <link rel="stylesheet" href="/css/universe.css">
     - <link rel="stylesheet" href="/css/center-atom.css">
     - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
   bottom:
+    - <script async defer src="//at.alicdn.com/t/c/font_4495482_sjg6otfg7pd.js"></script>
     - <script defer src="/live2d-widget/autoload.js"></script>
-
+    - <canvas id="universe"></canvas>
+    - <script defer src="/js/universe.js"></script>
 # 信封留言板
 # see https://akilar.top/posts/e2d3c450/
 envelope_comment:
@@ -961,6 +969,45 @@ envelope_comment:
   front_matter: #【可选】comments页面的 front_matter 配置
     title: 留言板
     comments: true
+
+# hexo-butterfly-swiper
+# see https://akilar.top/posts/8e1264d1/
+swiper:
+  enable: true # 开关
+  priority: 5 #过滤器优先权
+  enable_page: all # 应用页面
+  timemode: date #date/updated
+  layout: # 挂载容器类型
+    type: id
+    name: recent-posts
+    index: 0
+  default_descr: 再怎么看我也不知道怎么描述它的啦！
+  swiper_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css #swiper css依赖
+  swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js #swiper js依赖
+  custom_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css # 适配主题样式补丁
+  custom_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js # swiper初始化方法
+
+# electric_clock (安知鱼电子钟)
+# see https://anzhiy.cn/posts/fc18.html
+electric_clock:
+  enable: true # 开关
+  priority: 5 #过滤器优先权
+  enable_page: / # 应用页面
+  exclude:
+    # - /posts/
+    # - /about/
+  layout: # 挂载容器类型
+    type: class
+    name: sticky_layout
+    index: 0
+  loading: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif #加载动画自定义
+  clock_css: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css
+  clock_js: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js
+  ip_api: https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0
+  qweather_key:  2c87d9479d1c4b648370d9aec95714e2 # 和风天气key
+  gaud_map_key:  bd4b03777d348b0d98dd851e76f191dc # 高得地图web服务key
+  default_rectangle: false # 开启后将一直显示rectangle位置的天气，否则将获取访问者的地理位置与天气
+  rectangle: 113.34532,23.15624 # 获取访问者位置失败时会显示该位置的天气，同时该位置为开启default_rectangle后的位置
 
 # CDN
 # Don't modify the following settings unless you know how they work

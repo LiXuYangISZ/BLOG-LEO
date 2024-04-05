@@ -3,6 +3,8 @@ title: 零、带你走进Redis的世界 ⭐必看必看⭐
 date: 2024-04-05 14:46:00
 tags: Redis
 categorys: Redis从入门到入土
+swiper_index: 3
+description: 学习Redis的安装和使用的场景，能够解决哪些问题~
 ---
 
 # 1. NoSQL数据库简介
