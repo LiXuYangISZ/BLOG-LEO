@@ -66,7 +66,7 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: https://blog-photos-lxy.oss-cn-hangzhou.aliyuncs.com/images/2023/7/202403311856152.jpg
+index_img: 
 
 # If the banner of page not setting, it will show the top_img
 default_top_img: https://blog-photos-lxy.oss-cn-hangzhou.aliyuncs.com/images/2023/7/202403311856152.jpg
@@ -659,9 +659,12 @@ text_align_justify: false
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
 background: 
+ - url(https://source.fomal.cc/img/dm12.webp)
+ - url(https://source.fomal.cc/img/home_bg.webp)
+ - url(https://source.fomal.cc/img/dm7.webp)
 
 # Footer Background
-footer_bg: true
+footer_bg: false
 
 # Add mask to header or footer (为 header 或 footer 添加黑色半透遮罩)
 mask:
@@ -935,7 +938,7 @@ css_prefix: true
 inject:
   head:
     - <link rel="stylesheet" href="/css/center-atom.css">
-    - <link rel="stylesheet" href="/css/custom.css">
+    - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
   bottom:
     - <script defer src="/live2d-widget/autoload.js"></script>
 
