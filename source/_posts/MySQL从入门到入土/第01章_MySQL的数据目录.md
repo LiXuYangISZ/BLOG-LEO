@@ -1,11 +1,9 @@
 ---
-title: MySQL的数据目录
-date: 2024-04-01 16:37:48
+title: 一、MySQL的数据目录
+date: 2024-04-05 14:24:00
 tags: MySQL
-cover: https://blog-photos-lxy.oss-cn-hangzhou.aliyuncs.com/images/2023/7/202404041655917.png
-top_img: https://bu.dusays.com/2021/03/06/31162e0f3b406.jpg
+categorys: MySQL从入门到入土
 ---
-
 
 ## 1. MySQL8的主要目录结构
 
