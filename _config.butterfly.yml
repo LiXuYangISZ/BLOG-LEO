@@ -30,6 +30,7 @@ menu:
   留言板: /comments/ || fas fa-comments
   友链: /link/ || fas fa-link
   关于: /about/ || fas fa-heart
+  # 测试: /test/ || iconfont icon-weixin || faa-tada
   
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -45,16 +46,11 @@ code_word_wrap: false
 # formal:
 #   icon: link || the description || color
 social:
-  fab fa-github: https://github.com/LiXuYangISZ || Github || '#24292e'
-  fas fa-envelope: mailto:2422737092@qq.com || Email
-  fas fa-weixin: /img/WeChatQR.jpg || WeChat
-  fas fa-qq: https://res.abeim.cn/api/qq/?qq=2422737092 || QQ || '#3a9ced'
-  fas fa-bilibili: https://space.bilibili.com/434261812 || BiliBili || '#20b0e3'
-  # 微信: https://blog-photos-lxy.oss-cn-hangzhou.aliyuncs.com/images/2023/7/202404041655138.jpg || icon-weixin || faa-tada
-  # QQ: https://res.abeim.cn/api/qq/?qq=2422737092 || icon-QQ || faa-tada
-  # B站: https://space.bilibili.com/434261812 || icon-bilibili || faa-tada
-  # Email: mailto:2422737092@qq.com || icon-email || faa-tada
-  # Github: https://github.com/LiXuYangISZ || icon-Github || faa-tada
+  iconfont icon-weixin: /img/WeChatQR.jpg || 微信
+  iconfont icon-QQ: https://res.abeim.cn/api/qq/?qq=2422737092 || QQ
+  iconfont icon-bilibili: https://space.bilibili.com/434261812 || B站
+  iconfont icon-email: mailto:2422737092@qq.com || Email
+  iconfont icon-Github: https://github.com/LiXuYangISZ || GitHUb
 
 # Image (圖片設置)
 # --------------------------------------
@@ -253,7 +249,7 @@ aside:
       link: https://github.com/LiXuYangISZ
   card_announcement:
     enable: true
-    content: <center>主域名：<br><a href="https://blog.dalicoding.fun"><b><font color="#5ea6e5">欢迎来到Leo的博客~</font></b></a></center>
+    content: <center><br><a href="https://blog.dalicoding.fun"><b><font color="#5ea6e5">欢迎来到Leo的博客~</font></b></a></center>
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
@@ -941,14 +937,20 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
+    # - <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4495482_sjg6otfg7pd.css" media="defer" onload="this.media='all'">
+    - <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4495482_8vx12h1uae8.css">
     - <link rel="stylesheet" href="/css/universe.css">
     - <link rel="stylesheet" href="/css/center-atom.css">
     - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
+    
+
   bottom:
-    - <script async defer src="//at.alicdn.com/t/c/font_4495482_sjg6otfg7pd.js"></script>
     - <script defer src="/live2d-widget/autoload.js"></script>
     - <canvas id="universe"></canvas>
     - <script defer src="/js/universe.js"></script>
+    - <script defer src="/js/cursor.js"></script>
+    # - <script defer src="//at.alicdn.com/t/c/font_4495482_8vx12h1uae8.js"></script>
+
 # 信封留言板
 # see https://akilar.top/posts/e2d3c450/
 envelope_comment:
