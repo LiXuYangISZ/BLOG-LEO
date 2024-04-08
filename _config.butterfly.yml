@@ -939,6 +939,7 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
+    # - <link rel="stylesheet" href="/css/lantern.css"> # 过年灯笼
     - <link rel="stylesheet" href="/css/cat.css">
     - <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4495482_hmzgbd2kg2p.css">
     - <link rel="stylesheet" href="/css/universe.css">
