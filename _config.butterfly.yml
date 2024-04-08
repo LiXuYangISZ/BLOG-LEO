@@ -244,12 +244,12 @@ aside:
     description:
     button:
       enable: true
-      icon: fab fa-github
-      text: 🛴前往小家...
-      link: https://github.com/LiXuYangISZ
+      icon: 
+      text: 🛴前往小窝...
+      link: https://blog.csdn.net/LXYDSF
   card_announcement:
     enable: true
-    content: <center><br><a href="https://blog.dalicoding.fun"><b><font color="#5ea6e5">欢迎来到Leo的博客~</font></b></a></center>
+    content: <left>如果阅读过程中遇到了问题，请及时评论或者留言，看到了会在第一时间给出回复。</left>
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
@@ -940,7 +940,7 @@ css_prefix: true
 inject:
   head:
     - <link rel="stylesheet" href="/css/cat.css">
-    - <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4495482_8vx12h1uae8.css">
+    - <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4495482_hmzgbd2kg2p.css">
     - <link rel="stylesheet" href="/css/universe.css">
     - <link rel="stylesheet" href="/css/center-atom.css">
     - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
