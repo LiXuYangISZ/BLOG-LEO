@@ -7,7 +7,7 @@ doctype html
 html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside)
   head
     include ./head.pug
-    include ./lantern.pug
+    //- include ./lantern.pug
   body
     if theme.preloader.enable
       !=partial('includes/loading/index', {}, {cache: true})
