@@ -1,0 +1,7 @@
+top:
+  - class_name: girl
+    id_name: girl
+    # name:
+    # icon:
+    order:
+    html: '<div><div><video style="width: 100%;border-radius: 5px;transform: translateZ(0);will-change: scroll-position;" id="girl-video" src="https://www.cunshao.com/666666/api/web.php" controls="" controlslist="nodownload" ></video></div><div style="width: 100%;display: flex;justify-content: space-between;margin-top: 4px;" class="girl_btn_box"><div class="girl_btn_fuck">暂停/播放</div><div class="girl_btn_next">换一位</div></div></div> <style>#girl.card-widget.girl .item-headline{display:none;} .girl_btn_box>div {width: 45%;padding: 4px 0;background: var(--btn-bg);color: #fff;border-radius: 6px;text-align: center;box-sizing: border-box;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}</style><script> var girlVideo=document.getElementById("girl-video");if (girlVideo) {  var btnPlay = document.querySelector(".girl_btn_fuck");  var btnNext = document.querySelector(".girl_btn_next");  btnPlay.addEventListener("click", function () {    if (girlVideo.paused) {      girlVideo.play();      btnPlay.textContent = "暂停";    } else {      girlVideo.pause();      btnPlay.textContent = "播放";    }  });  btnNext.addEventListener("click", function () {    girlVideo.src = "https://www.cunshao.com/666666/api/web.php";    girlVideo.play();  });  girlVideo.addEventListener("ended", function () {    girlVideo.src = "https://www.cunshao.com/666666/api/web.php";    girlVideo.play();  });}</script>'
